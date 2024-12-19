@@ -193,4 +193,340 @@ describe('YahtZeeService', () => {
     // assert
     expect(result).toBe(expectedResult);
   });
+
+  it(`ลูกเต๋าที่ออกหน้า [1,1,1,2,3] จะต้องได้ผลลัพธ์ออกมาเป็น 3`, () => {
+    // arrange
+    const input = [1, 1, 1, 2, 3];
+    const expectedResult = 3;
+
+    // action
+    const result = service.sumScoreThreeOfKind(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [5,2,5,5,1] จะต้องได้ผลลัพธ์ออกมาเป็น 15`, () => {
+    // arrange
+    const input = [5, 2, 5, 5, 1];
+    const expectedResult = 15;
+
+    // action
+    const result = service.sumScoreThreeOfKind(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [2,1,4,4,4] จะต้องได้ผลลัพธ์ออกมาเป็น 12`, () => {
+    // arrange
+    const input = [2, 1, 4, 4, 4];
+    const expectedResult = 12;
+
+    // action
+    const result = service.sumScoreThreeOfKind(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [1,1,3,1,1] จะต้องได้ผลลัพธ์ออกมาเป็น 4`, () => {
+    // arrange
+    const input = [1, 1, 3, 1, 1];
+    const expectedResult = 4;
+
+    // action
+    const result = service.sumScoreFourOfKind(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [5,5,5,5,1] จะต้องได้ผลลัพธ์ออกมาเป็น 4`, () => {
+    // arrange
+    const input = [5, 5, 5, 5, 1];
+    const expectedResult = 20;
+
+    // action
+    const result = service.sumScoreFourOfKind(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [2,4,4,4,4] จะต้องได้ผลลัพธ์ออกมาเป็น 16`, () => {
+    // arrange
+    const input = [2, 4, 4, 4, 4];
+    const expectedResult = 16;
+
+    // action
+    const result = service.sumScoreFourOfKind(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [1,1,3,3,3] จะต้องได้ผลลัพธ์ออกมาเป็น 25`, () => {
+    // arrange
+    const input = [1, 1, 3, 3, 3];
+    const expectedResult = 25;
+
+    // action
+    const result = service.scoreFullHouse(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [2,4,4,4,2] จะต้องได้ผลลัพธ์ออกมาเป็น 25`, () => {
+    // arrange
+    const input = [2, 4, 4, 4, 2];
+    const expectedResult = 25;
+
+    // action
+    const result = service.scoreFullHouse(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [6,6,6,3,3] จะต้องได้ผลลัพธ์ออกมาเป็น 25`, () => {
+    // arrange
+    const input = [6, 6, 6, 3, 3];
+    const expectedResult = 25;
+
+    // action
+    const result = service.scoreFullHouse(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [1,2,3,4,6] จะต้องได้ผลลัพธ์ออกมาเป็น 30`, () => {
+    // arrange
+    const input = [1, 2, 3, 4, 6];
+    const expectedResult = 30;
+
+    // action
+    const result = service.scoreSmallStraight(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [6,5,4,3,1] จะต้องได้ผลลัพธ์ออกมาเป็น 30`, () => {
+    // arrange
+    const input = [6, 5, 4, 3, 1];
+    const expectedResult = 30;
+
+    // action
+    const result = service.scoreSmallStraight(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [2,3,4,5,2] จะต้องได้ผลลัพธ์ออกมาเป็น 30`, () => {
+    // arrange
+    const input = [2, 3, 4, 5, 2];
+    const expectedResult = 30;
+
+    // action
+    const result = service.scoreSmallStraight(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [5,4,3,2,2] จะต้องได้ผลลัพธ์ออกมาเป็น 30`, () => {
+    // arrange
+    const input = [5, 4, 3, 2, 2];
+    const expectedResult = 30;
+
+    // action
+    const result = service.scoreSmallStraight(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [1,2,3,4,5] จะต้องได้ผลลัพธ์ออกมาเป็น 30`, () => {
+    // arrange
+    const input = [1, 2, 3, 4, 5];
+    const expectedResult = 40;
+
+    // action
+    const result = service.scoreLargeStraight(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [2,3,4,5,6] จะต้องได้ผลลัพธ์ออกมาเป็น 30`, () => {
+    // arrange
+    const input = [2, 3, 4, 5, 6];
+    const expectedResult = 40;
+
+    // action
+    const result = service.scoreLargeStraight(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [5,4,3,2,1] จะต้องได้ผลลัพธ์ออกมาเป็น 30`, () => {
+    // arrange
+    const input = [5, 4, 3, 2, 1];
+    const expectedResult = 40;
+
+    // action
+    const result = service.scoreLargeStraight(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [5,2,4,3,1] จะต้องได้ผลลัพธ์ออกมาเป็น 30`, () => {
+    // arrange
+    const input = [5, 2, 4, 3, 1];
+    const expectedResult = 40;
+
+    // action
+    const result = service.scoreLargeStraight(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [1,2,3,4,5] จะต้องได้ผลลัพธ์ออกมาเป็น 15`, () => {
+    // arrange
+    const input = [1, 2, 3, 4, 5];
+    const expectedResult = 15;
+
+    // action
+    const result = service.scoreChance(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [1,1,1,2,3] จะต้องได้ผลลัพธ์ออกมาเป็น 8`, () => {
+    // arrange
+    const input = [1, 1, 1, 2, 3];
+    const expectedResult = 8;
+
+    // action
+    const result = service.scoreChance(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [1,1,3,3,3] จะต้องได้ผลลัพธ์ออกมาเป็น 11`, () => {
+    // arrange
+    const input = [1, 1, 3, 3, 3];
+    const expectedResult = 11;
+
+    // action
+    const result = service.scoreChance(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [1,2,3,4,6] จะต้องได้ผลลัพธ์ออกมาเป็น 16`, () => {
+    // arrange
+    const input = [1, 2, 3, 4, 6];
+    const expectedResult = 16;
+
+    // action
+    const result = service.scoreChance(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [5,4,3,2,1] จะต้องได้ผลลัพธ์ออกมาเป็น 15`, () => {
+    // arrange
+    const input = [5, 4, 3, 2, 1];
+    const expectedResult = 15;
+
+    // action
+    const result = service.scoreChance(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [1,1,1,1,1] จะต้องได้ผลลัพธ์ออกมาเป็น 50`, () => {
+    // arrange
+    const input = [1, 1, 1, 1, 1];
+    const expectedResult = 50;
+
+    // action
+    const result = service.scoreYAHTZEE(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [2,2,2,2,2] จะต้องได้ผลลัพธ์ออกมาเป็น 50`, () => {
+    // arrange
+    const input = [2, 2, 2, 2, 2];
+    const expectedResult = 50;
+
+    // action
+    const result = service.scoreYAHTZEE(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [3,3,3,3,3] จะต้องได้ผลลัพธ์ออกมาเป็น 50`, () => {
+    // arrange
+    const input = [3, 3, 3, 3, 3];
+    const expectedResult = 50;
+
+    // action
+    const result = service.scoreYAHTZEE(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [4,4,4,4,4] จะต้องได้ผลลัพธ์ออกมาเป็น 50`, () => {
+    // arrange
+    const input = [4, 4, 4, 4, 4];
+    const expectedResult = 50;
+
+    // action
+    const result = service.scoreYAHTZEE(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [5,5,5,5,5] จะต้องได้ผลลัพธ์ออกมาเป็น 50`, () => {
+    // arrange
+    const input = [5, 5, 5, 5, 5];
+    const expectedResult = 50;
+
+    // action
+    const result = service.scoreYAHTZEE(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
+
+  it(`ลูกเต๋าที่ออกหน้า [6,6,6,6,6] จะต้องได้ผลลัพธ์ออกมาเป็น 50`, () => {
+    // arrange
+    const input = [6, 6, 6, 6, 6];
+    const expectedResult = 50;
+
+    // action
+    const result = service.scoreYAHTZEE(input);
+
+    // assert
+    expect(result).toBe(expectedResult);
+  });
 });
