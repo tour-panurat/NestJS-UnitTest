@@ -88,8 +88,8 @@ export class YahtZeeService {
     let threeDuplicateNumber = false;
     for (let i = 0; i < target.length; i++) {
       const countOfNumber = input.filter((item) => item === target[i]);
-      if (countOfNumber.length === 2) twoDuplicateNumber = true;
-      if (countOfNumber.length === 3) threeDuplicateNumber = true;
+      if (countOfNumber.length >= 2) twoDuplicateNumber = true;
+      if (countOfNumber.length >= 3) threeDuplicateNumber = true;
     }
     return twoDuplicateNumber && threeDuplicateNumber ? 25 : 0;
   }
@@ -208,5 +208,20 @@ export class YahtZeeService {
     // return 0;
 
     return input.filter((item) => item === input[0]).length === 5 ? 50 : 0;
+  }
+
+  sumScore(input: number[]): number[] {
+    const result = [
+      this.sumScoreThreeOfKind(input),
+      this.sumScoreFourOfKind(input),
+      this.scoreFullHouse(input),
+      this.scoreSmallStraight(input),
+      this.scoreLargeStraight(input),
+      this.scoreChance(input),
+      this.scoreYAHTZEE(input),
+    ];
+    console.log(result);
+
+    return result;
   }
 }

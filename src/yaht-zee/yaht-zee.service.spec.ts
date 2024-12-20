@@ -529,4 +529,16 @@ describe('YahtZeeService', () => {
     // assert
     expect(result).toBe(expectedResult);
   });
+
+  it(`ลูกเต๋าที่ออกหน้า [6,6,6,6,6] จะต้องได้ผลลัพธ์ออกมาเป็น [18,24,25,0,0,30,50]`, () => {
+    // arrange
+    const input = [6, 6, 6, 6, 6];
+    const expectedResult = [18, 24, 25, 0, 0, 30, 50];
+
+    // action
+    const result = service.sumScore(input);
+
+    // assert
+    expect(result).toEqual(expectedResult);
+  });
 });
